@@ -1,6 +1,6 @@
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
-// import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
-import { Auth } from '@supabase/auth-ui-react'
+import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+// import { Auth } from '@supabase/auth-ui-react'
 import type { NextPage } from 'next'
 import Account from '../component/Account'
 
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className="col-6 auth-widget">
-            <Auth supabaseClient={supabase} theme="dark" />
+            <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
           </div>
         </div>
       ) : (
