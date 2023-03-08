@@ -14,7 +14,7 @@ export default function Account({ session }: { session: Session }) {
   const [avatar_url, setAvatarUrl] = useState<Profiles['avatar_url']>(null)
 
   useEffect(() => {
-        async function getProfile() {
+    async function getProfile() {
       try {
         setLoading(true)
         if (!user) throw new Error('No user')
