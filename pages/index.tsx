@@ -1,3 +1,4 @@
+import Header from '@/component/Header'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 // import { Auth } from '@supabase/auth-ui-react'
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
         </div>
       ) : (
         <>
+          <Header />
           <h3>Account</h3>
           <Account session={session} />
         </>
